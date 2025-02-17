@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int senha, tentativa;
+
+    printf("Digite a senha: ");
+
+    while (1) {
+        scanf("%d", &tentativa);
+
+        if (tentativa == 1234) {
+            printf("Acesso permitido.\n");
+            break;
+        }
+
+        printf("Senha incorreta. Tente novamente: ");
+    }
+
+    system("pause");
+
+    return 0;
+}
