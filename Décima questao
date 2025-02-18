@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int n, i = 1;
+    double soma = 0.0;
+    
+    printf("Digite um número inteiro positivo: ");
+    scanf("%d", &n);
+    
+    if (n < 1) {
+        printf("O valor deve ser maior que zero.\n");
+        return 0;
+    }
+    
+    while (i <= n) {
+        soma = soma + (1.0 / i);
+        i = i + 1;
+    }
+    
+    printf("A soma dos primeiros %d termos da série harmônica é: %.6lf\n", n, soma);
+    
+    system("pause");
+    return 0;
+}
