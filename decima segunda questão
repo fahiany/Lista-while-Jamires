@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int num, soma = 0;
+    
+    printf("Digite um número inteiro: ");
+    scanf("%d", &num);
+    
+    if (num < 0) {
+        printf("Por favor, insira um número positivo.\n");
+        return 0;
+    }
+    
+    while (num > 0) {
+        soma = soma + (num % 10);
+        num = num / 10;
+    }
+    
+    printf("A soma dos dígitos é: %d\n", soma);
+    
+    system("pause");
+    return 0;
+}
