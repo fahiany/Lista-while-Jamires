@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int num, binario[32], i = 0;
+    
+    printf("Digite um número decimal: ");
+    scanf("%d", &num);
+    
+    if (num < 0) {
+        printf("Por favor, insira um número inteiro positivo.\n");
+        return 0;
+    }
+    
+    if (num == 0) {
+        printf("O número binário é: 0\n");
+        return 0;
+    }
+    
+    while (num > 0) {
+        binario[i] = num % 2;
+        num = num / 2;
+        i++;
+    }
+    
+    printf("O número binário é: ");
+    for (int j = i - 1; j >= 0; j--) {
+        printf("%d", binario[j]);
+    }
+    printf("\n");
+    
+    system("pause");
+    return 0;
+}
